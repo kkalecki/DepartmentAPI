@@ -1,6 +1,7 @@
 package com.example.dailycodebufferspring.service;
 
 import com.example.dailycodebufferspring.entity.Department;
+import com.example.dailycodebufferspring.error.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public interface DepartmentService {
 
     List<Department> fetchDepartments();
 
-    Department fetchDepartmentById(Long departmentId);
+    Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
     void deleteDepartmentById(Long departmentId);
 
