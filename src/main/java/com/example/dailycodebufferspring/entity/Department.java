@@ -1,5 +1,7 @@
 package com.example.dailycodebufferspring.entity;
 
+import lombok.Builder;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,6 +9,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
 @Entity
+@Builder
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
