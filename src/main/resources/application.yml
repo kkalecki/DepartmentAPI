@@ -35,6 +35,12 @@ spring:
 welcome:
   message: Hello controller here!
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
 ---
 
 spring:
